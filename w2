@@ -1,0 +1,2 @@
+leaflet(quakes) %>% addTiles() %>% addCircleMarkers(
+  ~long, ~lat, radius = ~sqrt(mag)*3, popup = ~paste0("Magnitude: ", as.character(mag), "<BR>Depth: ", as.character(depth), " km", "<BR>Stations Reporting: ", as.character(stations)), clusterOptions = markerClusterOptions() )
